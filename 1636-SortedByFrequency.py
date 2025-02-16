@@ -53,4 +53,4 @@ class Solution(object):
 # Test Case
 nums = [1, 1, 2, 2, 2, 3]
 sol = Solution()
-print(sol.frequencySort(nums))  # Output: [3, 1, 1, 2, 2, 2]
+print(sol.frequencySort(nums))  # Output: [3, 1, 1, 2, 2, 2] 
