@@ -5,32 +5,44 @@ class Solution(object):
         :type target: str
         :rtype: int
         """
-        output={}
+        outputarray=[]
+        for i in s:
+            if i in target:
+                outputarray.append(i)
+        
         if len(s)<len(target):
             return 0
+        print(outputarray)
+        
+        # while len(outputarray)>0:
+        #     if outputarray[0] in target:
+
+
+
+        output={}
+
         for i in s:
           if i in target:
             if i in output:
                 output[i]+=1
             else:
                 output[i]=1
-        # print(output, )
+        if output=={}:
+            return 0
+        
+        print(output)
+
         if len(s)==min(output.values()):
             return 1
         return min(output.values())
        
        
 
-        # for i in target:
-        #     if i in output:
-        #         outputnumber+=output[i]//2
-        #     else:
-        #         return 0
-        # return outputnumber
+      
         
 
-s = "abbaccaddaeea"
-target = "aaaaa"
+s = "ilovecodingonleetcode"
+target = "code"
 
 instance = Solution()
 print(instance.rearrangeCharacters(s, target))
