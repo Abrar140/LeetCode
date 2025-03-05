@@ -5,9 +5,13 @@ class Solution(object):
         :type n: int
         :rtype: bool
         """
-        exponent = math.log(n, 2)
-        print(exponent)
-        return exponent.is_integer()
+        if n<=0:
+            return False
+        while n>=0:
+            if n%2!=0:
+                n=n/2
+            print(n)
+       
         
 n=536870912
 instance = Solution()
