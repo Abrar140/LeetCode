@@ -15,7 +15,7 @@ class Solution(object):
                 for j in range (len(mat[0])):
                     output.append(mat[i][j]) 
 
-        
+             print(output)
 
              for  i in range(r):
                 result.append([])

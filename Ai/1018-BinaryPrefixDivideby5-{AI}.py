@@ -11,6 +11,7 @@ class Solution(object):
         
         for bit in nums:
             num = (num * 2 + bit) % 5  # Keep remainder to avoid large numbers
+            print(num, bit,num*2,num*2+bit, num*2+bit%5)
             result.append(num == 0)  # True if divisible by 5
         
         return result

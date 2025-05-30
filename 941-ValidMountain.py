@@ -32,6 +32,6 @@ class Solution(object):
 
 
 
-arr = [3,5,5]
+arr = [3,5,1]
 solution = Solution()
 print(solution.validMountainArray(arr))

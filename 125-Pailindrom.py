@@ -23,6 +23,6 @@ class Solution(object):
 
 
 # Example usage
-s="0P"
+s="0P0"
 instance = Solution()
 print(instance.isPalindrome(s))  

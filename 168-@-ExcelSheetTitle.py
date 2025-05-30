@@ -6,6 +6,7 @@ class Solution(object):
         """
         result=""
         while columnNumber>0:
+            print(columnNumber)
             columnNumber-=1
             result=chr((columnNumber)%26+65)+result
             columnNumber//=26
