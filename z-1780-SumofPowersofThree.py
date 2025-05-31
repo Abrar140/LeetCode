@@ -7,6 +7,8 @@ class Solution(object):
         powerof3=[]
         for i in range(0,17):
             powerof3.append(3**i)
+
+        
         for i in range(len(powerof3)):
             print(powerof3[i], i)
 

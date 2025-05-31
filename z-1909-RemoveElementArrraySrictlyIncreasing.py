@@ -7,57 +7,34 @@ class Solution(object):
         if len(nums)==2:
             return True
         
-        count=0
-        i=0
+     
+        i=len(nums)-1
         n=len(nums)
 
-        while i<n:
-            if i+1==n:
-                break
-            if nums[i]==nums[i+1]:
-                count=count+1
-            if nums[i]>nums[i+1]:
-                count=count+1
-            print(nums[i])
+        while i>0:
+            print(i,"i")
+            if i >= len(nums):  # <-- this avoids out of range
+               i -= 1
+               continue
+            if nums[i-1]==nums[i] or nums[i-1]>nums[i]:
+                print(i,".....1",nums[i-1],nums[i])
+                if nums[i-2]==nums[i]:
+                    print("i amhere")
+                    nums.pop(i-2)
+                elif nums[i-2]>nums[i]:
+                    nums.pop(i)
+                else:
+                 nums.pop(i-1)
+            else:
+                i=i-1
+            print("i  amnums",nums)
 
-            i=i+1
-        
-        if count==1 or count==0:
+        if len(nums)==n-1 or len(nums)==n:
             return True
         return False
             
-
-        
-        
-        
-        i,  n =0, len(nums)
-        while i+1<n and nums[i]<nums[i+1]:
-            i+=1
-        
-        if i==n-1:
-            return True
-        
-        
-        print(nums, i)
-
-        nums.pop(i)
-        if i!=0:
-            i-=1
-        
-        print(nums)
-    
-        
-        while i+1<n-1 and nums[i]<nums[i+1]:
-            i+=1
-        
-        if i==n-2:
-            return True
-        return False
         
 
-        
-
-
-nums = [2,3,1,2]
+nums = [100,21,100]
 solution = Solution()
 print(solution.canBeIncreasing(nums))
