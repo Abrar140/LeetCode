@@ -5,7 +5,7 @@ class Solution(object):
         :rtype: int
         """
         # return bin(n).count('1')
-        print(to_binary(n))
+        return bin(n)[2:].count('1')
 
 
 

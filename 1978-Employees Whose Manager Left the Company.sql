@@ -1,0 +1,2 @@
+# Write your MySQL query statement below
+Select  e.employee_id from Employees e where e.salary <30000 and e.manager_id is not null and e.manager_id not in (Select e1.employee_id from Employees e1 where e1.employee_id = e.manager_id) order by e.employee_id
