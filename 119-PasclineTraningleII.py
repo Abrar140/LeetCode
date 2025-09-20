@@ -2,7 +2,7 @@ class Solution(object):
     def getRow(self, rowIndex):
         """
         :type rowIndex: int
-        :rtype: List[int]
+        :rtype: List[int] 
         """
         output=[]
         for i in range(rowIndex+1):
